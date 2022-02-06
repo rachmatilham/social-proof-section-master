@@ -101,11 +101,13 @@ main .review .reviewer .name-container {
 main .review .reviewer .name {
   color: var(--white);
   font-weight: 700;
+  font-size: 1.17em;
 }
 
 main .review .reviewer .class {
   color: var(--softPink);
   font-weight: 400;
+  font-size: 1.17em;
 }
 
 main .review .testimonial {

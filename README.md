@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution page on Frontend Mentor]()
-- Github Pages URL: [Github Pages](https://github.com/rachmatilham/social-proof-section-master)
+- Solution URL: [Solution page on Frontend Mentor](https://www.frontendmentor.io/solutions/social-proof-section-iOaRCRY6U)
+- Github Pages URL: [Github Pages](https://rachmatilham.github.io/social-proof-section-master/)
 
 ## My process
 
