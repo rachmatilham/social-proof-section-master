@@ -1,0 +1,254 @@
+:root {
+  --veryDarkMagenta: hsl(300, 43%, 22%);
+  --softPink: hsl(333, 80%, 67%);
+  --darkGrayishMagenta: hsl(302, 10%, 53%);
+  --lightGrayishMagenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.bg-top {
+  width: 100%;
+  height: 232px;
+  background: url(images/bg-pattern-top-mobile.svg) no-repeat;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+main {
+  margin: 80px 25px 100px;
+  text-align: center;
+}
+
+main h1 {
+  color: var(--veryDarkMagenta);
+  margin-bottom: 30px;
+}
+
+main p.heading {
+  margin-bottom: 50px;
+  color: var(--darkGrayishMagenta);
+}
+
+main .rating-container {
+  margin-bottom: 30px;
+}
+
+main .rating {
+  width: 100%;
+  height: 80px;
+  background-color: var(--lightGrayishMagenta);
+  margin-bottom: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+main .rating .star img {
+  margin: 0 5px;
+}
+
+main .rating p {
+  font-weight: 700;
+  color: var(--veryDarkMagenta);
+}
+
+/* review part */
+
+main .review {
+  width: 100%;
+  height: 250px;
+  background-color: var(--veryDarkMagenta);
+  margin-bottom: 20px;
+  border-radius: 5px;
+  padding: 40px 30px;
+  text-align: left;
+}
+
+main .review .reviewer {
+  display: flex;
+  padding-bottom: 30px;
+}
+
+main .review .reviewer img {
+  width: 40px;
+  height: auto;
+  border-radius: 50%;
+  margin-right: 25px;
+}
+
+main .review .reviewer .name-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 0.75em;
+  align-content: center;
+}
+
+main .review .reviewer .name {
+  color: var(--white);
+  font-weight: 700;
+}
+
+main .review .reviewer .class {
+  color: var(--softPink);
+  font-weight: 400;
+}
+
+main .review .testimonial {
+  color: var(--lightGrayishMagenta);
+  font-weight: 500;
+  font-size: 0.8em;
+  line-height: 1.6;
+}
+
+.bg-bottom {
+  width: 100%;
+  height: 503px;
+  background: url(images/bg-pattern-bottom-mobile.svg) no-repeat;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+.attribution {
+  bottom: 0;
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* RESPONSIVE DESIGN */
+@media (min-width: 992px) {
+  body {
+    max-height: 800px;
+    position: relative;
+    padding-top: 125px;
+  }
+
+  .bg-top {
+    width: 100%;
+    height: 362px;
+    background: url(images/bg-pattern-top-desktop.svg) no-repeat;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+
+  main {
+    margin: 0 11vw;
+    display: grid;
+    grid-template-areas:
+      "a b"
+      "c c";
+    grid-template-columns: 1fr 1fr;
+    gap: 80px 140px;
+  }
+
+  main .heading-container {
+    grid-area: a;
+    text-align: left;
+  }
+
+  main h1 {
+    margin-bottom: 10px;
+    font-size: 3em;
+    line-height: 1;
+  }
+
+  main p.heading {
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+
+  main .rating-container {
+    grid-area: b;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main .rating-container div:nth-child(2) {
+    margin-left: 50px;
+  }
+
+  main .rating-container div:last-child {
+    margin-left: 100px;
+    margin-bottom: 0;
+  }
+
+  main .rating {
+    width: 450px;
+    height: 60px;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  main .rating .star img {
+    margin: 0 1px;
+  }
+
+  main .rating p {
+    font-size: 0.95em;
+    margin-left: 30px;
+  }
+
+  main .review-container {
+    grid-area: c;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  main .review-container .review:nth-child(2) {
+    margin-top: 15px;
+  }
+
+  main .review-container .review:last-child {
+    margin-top: 30px;
+  }
+
+  main .review {
+    width: 350px;
+    height: 235px;
+    margin: 0;
+  }
+
+  main .review .reviewer {
+    padding-bottom: 25px;
+  }
+
+  .bg-bottom {
+    width: 100%;
+    height: 673px;
+    background: url(images/bg-pattern-bottom-desktop.svg) no-repeat;
+    position: absolute;
+    top: 130px;
+    left: 355px;
+    z-index: -1;
+  }
+
+  .attribution {
+    position: absolute;
+    bottom: auto;
+    width: 100%;
+  }
+}
